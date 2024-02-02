@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&family=Gamja+Flower&family=Jura:wght@500&family=Poppins:ital,wght@0,300;1,500&display=swap');
+
+*{
+    font-family: 'B612 Mono', monospace;
+    font-family: 'Gamja Flower', sans-serif;
+    font-family: 'Jura', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.userName{
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
