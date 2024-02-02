@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { updateUserName } from '../../features/fetch/fetchdata';
 import { useNavigate } from "react-router-dom"
 import './registration.css'
+import { toast } from "react-toastify"
+
 
 const Registration = () => {
   const navigate = useNavigate()
@@ -12,12 +14,14 @@ const Registration = () => {
   const password = watch("password"); // Watching the "password" field directly
 
   const onSubmit = (data) => {
-    dispatch(updateUserName({ userName: data.firstName }));
+    dispatch(updateUserName({ userName: data.firstName, userEmail: data.email }));
     navigate("/")
+    toast.success("Registration successful !!")
   };
 
   return (
     <div className='form-box'>
+      {/* <ToastContainer /> */}
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           name='firstName'

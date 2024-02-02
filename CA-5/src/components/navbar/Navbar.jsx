@@ -2,9 +2,13 @@ import React from 'react'
 import logo from "./assets/logo.png"
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 const Navbar = () => {
   return (
     <div>
+      <ToastContainer />
       <nav
         className="navbar">
 

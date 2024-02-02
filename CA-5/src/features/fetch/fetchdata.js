@@ -4,6 +4,7 @@ import axios from "axios";
 
 const initialState = {
     userName: "Reader",
+    userEmail: null,
     searchValue: "",
     data: null,
     status: "idle", // idle, loading, success, error
@@ -30,12 +31,13 @@ const dataSlice = createSlice({
     name: "bookData",
     initialState,
     reducers: {
-        updateSearch:(state, action) => {
+        updateSearch: (state, action) => {
             state.searchValue = action.payload.searchValue
         },
 
         updateUserName: (state, action) => {
             state.userName = action.payload.userName
+            state.userEmail = action.payload.userEmail
         }
 
     },
@@ -46,11 +48,11 @@ const dataSlice = createSlice({
                 state.errorMessage = null; // Reset error state
             })
             .addCase(fetchData.fulfilled, (state, action) => {
-                if (Array.isArray(action.payload)){
+                if (Array.isArray(action.payload)) {
                     state.status = "success";
                     state.data = action.payload;
                 }
-                else{
+                else {
                     // state.errorMessage = action.payload.error.message
                     state.status = "error"
                     state.errorMessage = action.payload.message
@@ -59,5 +61,5 @@ const dataSlice = createSlice({
     },
 });
 
-export const {updateSearch, updateUserName} = dataSlice.actions
+export const { updateSearch, updateUserName } = dataSlice.actions
 export default dataSlice.reducer;
