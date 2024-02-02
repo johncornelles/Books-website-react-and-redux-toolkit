@@ -13,19 +13,21 @@ const Navbar = () => {
         className="navbar">
 
         <Link style={
-          { textDecoration: "none",
-          color:"red"
-           }
+          {
+            textDecoration: "none",
+            color: "red"
+          }
         } to={"/"}>
           <h1>Home</h1>
         </Link>
         <Link to={"/"}>
-          <img src={logo} height={"70px"} width={"200px"} />
+          <img src={logo} height={"100px"} width={"200px"} />
         </Link>
         <Link style={
-          { textDecoration: "none",
-          color: "red"
-           }
+          {
+            textDecoration: "none",
+            color: "red"
+          }
         } to={"/registration"}>
           <h1>Register</h1>
         </Link>
