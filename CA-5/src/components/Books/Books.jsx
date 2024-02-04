@@ -13,7 +13,6 @@ const SearchBar = () => {
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
     dispatch(updateSearch({ searchValue: inputValue }));
-
     // Extract titles from Redux store data and filter based on input value
     const titles = data.map(item => item.title);
     const filteredTitles = titles.filter(title => title.toLowerCase().includes(inputValue.trim().toLowerCase()));

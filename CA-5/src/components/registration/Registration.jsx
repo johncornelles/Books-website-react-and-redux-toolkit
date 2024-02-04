@@ -21,7 +21,6 @@ const Registration = () => {
 
   return (
     <div className='form-box'>
-      {/* <ToastContainer /> */}
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           name='firstName'
